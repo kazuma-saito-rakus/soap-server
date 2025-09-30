@@ -1,0 +1,9 @@
+services:
+  app:
+    build:
+      context: .
+    image: soap-server:latest # Image name
+    container_name: soap-server
+    ports:
+      - "10000:8080"
+    command: ["java", "-jar", "/app/soap-server.jar"]
